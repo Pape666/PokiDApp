@@ -1,0 +1,183 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Alto";
+  src: url("./AlteHaasGroteskBold.ttf");
+}
+
+@layer components {
+
+  html {
+    @apply bg-black font-alto text-white;
+  }
+
+  h2 {
+    @apply text-lg flex justify-center;
+  }
+
+  .app {
+    @apply flex flex-col w-screen h-screen;
+  }
+
+  .lock-icon {
+    @apply scale-50 w-10 h-10 mx-auto my-5 text-red-500;
+  }
+
+  .sidebar-icon {
+      @apply relative flex items-center justify-center
+      h-12 w-12 m-2 shadow-lg
+      bg-gray-800 text-red-500 font-alto
+      hover:bg-red-500 hover:text-white
+      rounded-3xl hover:rounded-xl
+      transition-all duration-300 ease-linear
+      cursor-pointer;
+  }
+
+  .sidebar-tooltip {
+      @apply absolute w-auto p-2 min-w-max left-14
+      rounded-md shadow-md
+      text-white bg-black
+      text-xs font-alto
+      transition-all duration-100 scale-0 origin-left;
+  }
+
+  .poki-icon {
+    @apply relative flex
+    h-10 w-10 shadow-lg
+    bg-gray-800 text-red-500 font-alto
+    hover:bg-red-500 hover:text-white
+    rounded-xl hover:rounded-3xl
+    transition-all duration-300 ease-linear
+    cursor-pointer;
+  }
+
+  .poki-tooltip {
+    @apply absolute w-auto p-2 min-w-max left-12
+    rounded-md shadow-md
+    text-white bg-black
+    text-xs font-alto
+    transition-all duration-100 scale-0 origin-left;
+  }
+
+  .channel-card {
+      @apply flex flex-col justify-center px-3 align-middle text-white font-alto
+      h-7 w-5/6 my-1 mx-auto shadow-lg
+      bg-gray-900 hover:bg-red-500 
+      overflow-x-hidden
+      hover:rounded-lg
+      transition-all duration-300 ease-linear
+      cursor-pointer;
+  }
+
+  .signout-button {
+    @apply flex px-3 align-middle text-white font-alto
+    h-7 w-auto my-auto shadow-lg
+    bg-gray-800 hover:bg-red-500 
+    overflow-x-hidden
+    hover:rounded-lg
+    transition-all duration-300 ease-linear
+    cursor-pointer;
+  }
+
+  .user-card {
+    @apply flex px-3 align-middle text-white font-alto
+    h-7 w-5/6 my-1 mx-auto shadow-lg
+    bg-gray-900 hover:bg-red-500 
+    overflow-x-hidden
+    hover:rounded-lg
+    transition-all duration-300 ease-linear
+    cursor-pointer;
+  }
+
+  .my-user {
+    @apply 
+    h-7 w-auto my-auto mx-auto shadow-lg flex justify-center
+    bg-gray-800 hover:bg-red-500 
+    overflow-x-hidden
+    hover:rounded-lg
+    transition-all duration-300 ease-linear
+    cursor-pointer;
+  }
+  .my-user button {
+    @apply px-3 align-middle text-white font-alto ;
+  }
+
+  .profBox {
+    @apply flex flex-col justify-center h-14 bg-gray-900 shadow-lg;
+  }
+
+  .headerUI{
+    @apply px-3 flex justify-between h-16 w-full bg-gray-900 shadow-lg;
+  }
+
+  .login {
+    @apply my-2 mx-auto w-24 h-8 bg-gray-900;
+  }
+
+  label {
+    @apply mx-auto;
+  }
+
+  .logInput {
+    @apply flex px-3 text-white font-alto
+    h-8 w-5/6 my-2 mx-auto shadow-lg
+    bg-gray-600 hover:bg-gray-500 
+    border-solid hover:border-2 border-red-500
+    overflow-x-hidden
+    rounded-md
+    hover:rounded-lg
+    transition-all duration-300 ease-linear
+    cursor-pointer;  
+  }
+
+  .waiting-room {
+    @apply flex flex-col h-full w-full bg-gray-700;
+  }
+
+  .chat-room {
+    @apply flex flex-col justify-end h-full w-full bg-gray-700;
+  }
+
+  .msg-box{
+    @apply flex justify-center w-full h-auto bg-gray-900;
+  }
+
+  .msg-box input{
+    @apply flex px-3 align-middle text-white font-alto
+    h-10 w-5/6 my-5 shadow-lg
+    bg-gray-700 hover:bg-gray-600 
+    border-solid hover:border-2 border-red-500
+    overflow-x-hidden
+    rounded-l-md
+    hover:rounded-l-lg
+    transition-all duration-300 ease-linear
+    cursor-pointer;  
+  }
+
+  .msg-box button {
+    @apply flex items-center justify-center
+    h-10 w-10 my-5 shadow-lg
+    bg-gray-800 text-red-500 font-alto
+    hover:bg-red-500 hover:text-white
+    rounded-r-md hover:rounded-r-lg
+    transition-all duration-300 ease-linear
+    cursor-pointer;
+  }
+
+  .message {
+    @apply flex align-middle h-14 w-full break-words 
+    border-solid border-y-2 border-gray-900 shadow-xl
+    px-3;
+  }
+
+  .message-text { 
+    @apply flex flex-col;
+  }
+  
+  button:disabled {
+    @apply opacity-50;
+  }
+
+}
